@@ -5,24 +5,24 @@ var app = angular.module('taskApp', ['ngRoute']);
 app.config(function ($routeProvider) {
     $routeProvider
             .when("/", {
-                templateUrl: 'views/principal.html',
-                controller: 'taskCtrl'
+                templateUrl: "views/principal.html"
+                //controller: 'taskCtrl'
             })
             // notar que nessa rota, há um parâmetro chamado "id";
             // ou seja, essa rota é "acionada" quando a URL for /produto/123, por exemplo
-            .when("/produto/:id", {
+            /*.when("/produto/:id", {
                 templateUrl: 'views/produto.html',
                 controller: 'taskCtrl'
             })
             .otherwise({
                 redirectTo: "/"
-            });
+            });*/
 });
-/*
+
 // cria o controlador, "injetando" o $scope,
 // o $http (para fazer AJAX) e
 // o $routeParams (para obter os parâmetros da URL)
-app.controller('lojaCtrl', function ($scope, $http, $routeParams) {
+/*app.controller('lojaCtrl', function ($scope, $http, $routeParams) {
 
     // guarda os valores dos sliders
     $scope.min = 0;
@@ -35,7 +35,7 @@ app.controller('lojaCtrl', function ($scope, $http, $routeParams) {
     // guarda a lista de produtos
     $scope.produtos = [];
 
-    // faz a chamada AJAX para obter os produtos
+/*    // faz a chamada AJAX para obter os produtos
     $http.get('produtos.json').then(function (response) {
         $scope.produtos = response.data;
 
@@ -63,5 +63,6 @@ app.controller('lojaCtrl', function ($scope, $http, $routeParams) {
     $scope.filtro = function (value, index, array) {
         return value.preco >= $scope.min && value.preco <= $scope.max;
     };
+
 });
 */
