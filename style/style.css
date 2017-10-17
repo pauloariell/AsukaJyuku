@@ -1,3 +1,4 @@
-table {
-  background-color: rgba(32, 5, 61, 0.62);
+table tr th {
+  background-color: black;
+  color: white;
 }
